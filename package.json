@@ -1,0 +1,25 @@
+{
+  "name": "seafood-chain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.0.33",
+    "core-js": "^3.6.4",
+    "ipfs-api": "^26.1.2",
+    "ipfs-http-client": "^44.0.0",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}

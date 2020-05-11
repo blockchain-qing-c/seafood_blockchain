@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seafood Safety System</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+</head>
+<body>
+<div class="page login-page">
+    <div class="container d-flex align-items-center">
+        <div class="form-holder has-shadow">
+            <div class="row">
+                <!-- Logo & Information Panel-->
+                <div class="col-lg-6">
+                    <div class="info d-flex align-items-center">
+                        <div class="content">
+                            <div class="logo">
+                                <h1>Welcome to register page</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Form Panel    -->
+                <div class="col-lg-6 bg-white">
+                    <div class="form d-flex align-items-center">
+                        <div class="content">
+                            <div id="reg" class="form-signin">
+                                <div class="form-group">
+                                    <label class="control-label sr-only" for="register-email">Hidden label</label>
+                                    <input id="register-email" type="email" name="email" class="form-control" placeholder="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label sr-only" for="register-password">Hidden label</label>
+                                    <input id="register-password" name="password" type="password" class="form-control" placeholder="password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label sr-only" for="login-account">Hidden label</label>
+                                    <input id="login-account" type="text" name="login-account" required data-msg="please input a metamask account" placeholder="metamask account" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="company-type">
+                                        <option>Logistics company</option>
+                                        <option>Restaurant</option>
+                                        <option>Customer</option>
+                                    </select>
+                                </div>
+                                <p style="color:red" text="" id="isRegistered"></p>
+                                <div class="form-group">
+                                    <button id="regbtn" type="submit" name="registerSubmit" class="btn btn-primary">register</button>
+                                </div>
+                            </div>
+                            <small>having account?</small><a href="index.html" class="signup">&nbsp;login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

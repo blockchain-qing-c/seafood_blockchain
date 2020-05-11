@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seafood Safety System</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+</head>
+<body>
+<div class="page login-page">
+    <div class="container d-flex align-items-center">
+        <div class="form-holder has-shadow">
+            <div class="row">
+                <!-- Logo & Information Panel-->
+                <div class="col-lg-6 bg-white" >
+                    <div class="form d-flex align-items-center">
+                        <div class="content">
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="info-id">Hidden label</label>
+                                <input id="info-id" type="text" name="user-company"  placeholder="input fishId" class="form-control">
+                            </div>
+                            <button id="get-info" type="submit" class="btn btn-primary">get information</button>
+                            <small>return to login again</small><a href="index.html"  class="signup">&nbsp;login</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Form Panel    -->
+                <div class="col-lg-6 bg-white">
+                    <div class="form d-flex align-items-center">
+                        <div class="content">
+                            <div class="form-group">
+                                <select class="form-control select-fishId" id="select-fishId">
+                                    <option>Infomation in seafood fishing company</option>
+                                    <option>Infomation in logistics company</option>
+                                    <option>Infomation in restaurant</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-email">Hidden label</label>
+                                <input id="user-result-email" type="text" name="user-result-email"  placeholder="email" class="form-control" readonly="readonly">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-company">Hidden label</label>
+                                <textarea class="form-control" rows="3" id="user-result-company" name="user-result-company" placeholder="company" readonly="readonly"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-city">Hidden label</label>
+                                <input id="user-result-city" type="text" name="user-result-city"  placeholder="city" class="form-control" readonly="readonly">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-freshness">Hidden label</label>
+                                <textarea class="form-control" rows="3" id="user-result-freshness" name="user-result-freshness" placeholder="freshness" readonly="readonly"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-ipfs">Hidden label</label>
+                                <input id="user-result-ipfs" type="text" name="user-result-ipfs"  placeholder="ipfs hash number" class="form-control" readonly="readonly">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-id">Hidden label</label>
+                                <input id="user-result-id" type="text" name="user-result-id"  placeholder="transaction ID" class="form-control" readonly="readonly" >
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-time">Hidden label</label>
+                                <input id="user-result-time" type="text" name="user-result-time"  placeholder="time" class="form-control" readonly="readonly">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/admin.js"></script>
+<script>
+
+</script>
+</body>
+</html>
+

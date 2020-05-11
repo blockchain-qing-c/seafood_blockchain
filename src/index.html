@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartContract1</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+</head>
+<body>
+<div class="page login-page">
+  <div class="container d-flex align-items-center">
+    <div class="form-holder has-shadow">
+      <div class="row">
+        <!-- Logo & Information Panel-->
+        <div class="col-lg-6">
+          <div class="info d-flex align-items-center">
+            <div class="content">
+              <div class="logo">
+                <h1>Welcome to login</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Form Panel    -->
+        <div class="col-lg-6 bg-white">
+          <div class="form d-flex align-items-center">
+            <div class="content">
+              <div  class="form-validate" id="loginFrom">
+                <div class="form-group">
+                  <label class="control-label sr-only" for="login-email">Hidden label</label>
+                  <input id="login-email" type="text" name="email" required data-msg="please input your email" placeholder="email"  class="form-control">
+                </div>
+                <div class="form-group">
+                  <label class="control-label sr-only" for="login-password">Hidden label</label>
+                  <input id="login-password" type="password" name="password" required data-msg="please input your email" placeholder="password" class="form-control">
+                </div>
+                <p style="color:red" text="" id="status"></p>
+                <button id="login" type="submit" class="btn btn-primary">sign in</button>
+                <div style="margin-top: -40px;">
+                  <!-- <input type="checkbox"  id="check1"/>&nbsp;<span>记住密码</span>
+                  <input type="checkbox" id="check2"/>&nbsp;<span>自动登录</span> -->
+                </div>
+              </div>
+              <br />
+              <small>Without account?</small><a href="register.html"  class="signup">&nbsp;register</a>
+              <br>
+              <small>Go to admin account?</small><a href="javascript:void(0)"  class="signup" id="admin">&nbsp;signin</a>
+              <p style="color:red" text="" id="adminStatus"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SmartContract1</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+</head>
+<body>
+<div class="page login-page">
+    <div class="container d-flex align-items-center">
+        <div class="form-holder has-shadow">
+            <div class="row">
+                <!-- Logo & Information Panel-->
+                <div class="col-lg-6 bg-white" >
+                    <div class="form d-flex align-items-center">
+                        <div class="content">
+                            <button class="btn btn-primary" id="reject" type="submit" >reject</button>
+                            <h1 id="fishId"></h1>
+
+                            <div class="form-group">
+                                <select class="form-control send-select-fishId" id="user-fishId">
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-inline">
+                                    <button class="btn btn-primary" id="user-store" disabled="true">store</button>
+                                    <input type="text" class="form-control" name="user-store" id="user-hash" style="width: 80%;" placeholder="transaction ID" readonly="readonly"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-company">Hidden label</label>
+                                <textarea class="form-control" rows="3" id="user-company" name="user-company" placeholder="company"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-city">Hidden label</label>
+                                <input id="user-city" type="text" name="user-city"  placeholder="city" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-freshness">Hidden label</label>
+                                <textarea class="form-control" rows="3" id="user-freshness" name="user-freshness" placeholder="please input freshness attributes of the fish."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-inline">
+                                    <button class="btn btn-primary" id="user-upload">upload</button>
+                                    <input type="file" class="form-control" style="width: 80%;" name="upload-img" accept="image/png,image/jpeg,image/gif,image/jpg" id="user-file"/>
+                                </div>
+                                <p style="color:red" text="" id="isUploaded"></p>
+                            </div>
+
+
+
+                            <button id="add_new" type="submit" class="btn btn-primary">add information</button>
+                            <br>
+                            <small>return to login again</small><a href="index.html"  class="signup">&nbsp;login</a>
+                            <input id="user-ipfs" type="text" name="user-ipfs" style="display:none">
+                        </div>
+                    </div>
+                </div>
+                <!-- Form Panel    -->
+                <div class="col-lg-6 bg-white">
+                    <div class="form d-flex align-items-center">
+                        <div class="content">
+                            <div class="form-group">
+                                <select class="form-control select-fishId" id="select-fishId">
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-company">Hidden label</label>
+                                <textarea class="form-control" rows="3" id="user-result-company" name="user-result-company" placeholder="company" readonly="readonly"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-city">Hidden label</label>
+                                <input id="user-result-city" type="text" name="user-result-city"  placeholder="city" class="form-control" readonly="readonly">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-freshness">Hidden label</label>
+                                <textarea class="form-control" rows="3" id="user-result-freshness" name="user-result-freshness" placeholder="freshness" readonly="readonly"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-ipfs">Hidden label</label>
+                                <input id="user-result-ipfs" type="text" name="user-result-ipfs"  placeholder="ipfs hash number" class="form-control" readonly="readonly">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-id">Hidden label</label>
+                                <input id="user-result-id" type="text" name="user-result-id"  placeholder="transaction ID" class="form-control" readonly="readonly" >
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-time">Hidden label</label>
+                                <input id="user-result-time" type="text" name="user-result-time"  placeholder="time" class="form-control" readonly="readonly">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only" for="user-result-isSent">Hidden label</label>
+                                <input id="user-result-isSent" type="text" name="user-result-isSent" placeholder="isSent" class="form-control" readonly="readonly">
+                            </div>
+                            <div class="input-group col-xs-12">
+                                <span class="input-group-btn ">
+                                    <button class="btn btn-primary" id="send" type="submit" disabled="disabled">send</button>
+                                </span>
+                                <div class="form-group">
+                                    <select name="type" class="form-control select-email" id="send-select" style="width: 500%;">
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/user.js"></script>
+<script src="js/bundle.js"></script><script>
+
+</script>
+</body>
+</html>
+
